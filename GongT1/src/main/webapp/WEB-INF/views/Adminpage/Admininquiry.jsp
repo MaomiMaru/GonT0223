@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Infantry</title>
+    <title>공T 관리자 페이지</title>
   </head>
   <style type="text/css">
   	.navbar.bg-light{
@@ -181,7 +181,7 @@
 	  		<div class="side-bar-links">
 	  			<div class="side-bar-logo text-center py-3">
 	  				
-	  				<h5>공 T 관리자 페이지</h5>
+	  				<h5>공T 관리자 페이지</h5>
 	  			</div>
 	  			<ul class="navbar-nav">
 	  					<li class="nav-item">
@@ -231,18 +231,16 @@
   				</tr>
   			
   	<c:forEach var="InquiryDTO" items="${InquiryDTOList}">
-<div>
-<tr>
+<tr onclick="location.href='${pageContext.request.contextPath}/Admin/inquiry_content?i_num=${InquiryDTO.i_num}'">
 <th>${InquiryDTO.id} </th>
 <th>${InquiryDTO.i_title}</th>
 <th>${InquiryDTO.i_content}</th>
 <th>${InquiryDTO.i_date}</th>
 <th>${InquiryDTO.asw_title}</th>
 <th>${InquiryDTO.asw_content}</th>
-
 </tr>
-<br><br>
-</div>
+
+
 	</c:forEach>
 	
 	

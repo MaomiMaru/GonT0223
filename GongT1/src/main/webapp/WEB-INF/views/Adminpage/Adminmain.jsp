@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Infantry</title>
+    <title>공T 관리자 페이지</title>
   </head>
   <style type="text/css">
   	.navbar.bg-light{
@@ -167,7 +167,10 @@
 		  <a class="navbar-brand" href="#"></a>
 		  <div id="open-menu" class="menu-bar">
 		  	<div class="bars"></div>
+		  	
 		  </div>
+		  <a href="${pageContext.request.contextPath}/main/main" class="nav-links d-block" style="color:white">
+		  	<i class="fa fa-home pr-2" style="color:white"></i>메인 페이지</a>
 		    <ul class="navbar-nav ml-auto">
 		      <li class="nav-item dropdown ets-right-0">
 		        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -239,7 +242,7 @@
 <th>${MemberDTO.comnum}</th>
 <th>${MemberDTO.matching}</th>
 </tr>
-<br><br>
+
 </div>
 	</c:forEach>
 	

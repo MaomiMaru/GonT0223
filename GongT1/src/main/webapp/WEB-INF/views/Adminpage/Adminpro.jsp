@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Infantry</title>
+    <title>공T 관리자 페이지</title>
   </head>
   <style type="text/css">
   	.navbar.bg-light{
@@ -230,10 +230,8 @@
   				</tr>
   			
   	<c:forEach var="ProjectDTO" items="${ProjectDTOList}">
- <div>
-
-<tr>
-<th>${ProjectDTO.p_num} , ${ProjectDTO.id} </th>
+ <tr onclick="location.href='${pageContext.request.contextPath}/project/project?p_num=${ProjectDTO.p_num }'">
+<th> ${ProjectDTO.id} </th>
 <th>${ProjectDTO.p_title}</th>
 <th>${ProjectDTO.p_content}</th>
 <th>${ProjectDTO.p_writedate}</th>
@@ -242,10 +240,10 @@
 <th><input type="button" value="글삭제" style="font-size:8px;" 
 onclick="location.href='${pageContext.request.contextPath}/Adminpage/AdeletePro?p_num=${ProjectDTO.p_num}'"></th>
 </tr>
-
-<br><br>
-</div>
 	</c:forEach>
+<br><br>
+
+
 	
 	
   			</table>

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Infantry</title>
+    <title>공T 관리자 페이지</title>
   </head>
   <style type="text/css">
   	.navbar.bg-light{
@@ -230,8 +230,7 @@
   				</tr>
   			
   	<c:forEach var="ResumeDTO" items="${ResumeDTOList}">
-<div>
-<tr>
+<tr onclick="location.href='${pageContext.request.contextPath}/resume/resume?r_num=${ResumeDTO.r_num }'">
 <th>${ResumeDTO.id} </th>
 <th>${ResumeDTO.r_name}</th>
 <th>${ResumeDTO.r_content}</th>
@@ -241,9 +240,10 @@
 onclick="location.href='${pageContext.request.contextPath}/Adminpage/AdeleteRe?r_num=${ResumeDTO.r_num}'"></th>
 
 </tr>
+</c:forEach>
 <br><br>
-</div>
-	</c:forEach>
+
+	
 	
 	
   			</table>

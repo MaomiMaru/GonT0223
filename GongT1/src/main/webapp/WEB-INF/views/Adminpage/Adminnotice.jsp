@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Infantry</title>
+    <title>공T 관리자 페이지</title>
   </head>
   <style type="text/css">
   	.navbar.bg-light{
@@ -230,16 +230,15 @@
   				</tr>
   			
   	<c:forEach var="NoticeDTO" items="${NoticeDTOList}">
-<div>
-<tr>
+<tr onclick="location.href='${pageContext.request.contextPath}/Admin/content?n_num=${NoticeDTO.n_num}'">
 <th>${NoticeDTO.n_num} </th>
 <th>${NoticeDTO.n_title}</th>
 <th>${NoticeDTO.n_content}</th>
 <th>${NoticeDTO.n_date}</th>
 
 </tr>
-<br><br>
-</div>
+
+
 	</c:forEach>
 	
 	
