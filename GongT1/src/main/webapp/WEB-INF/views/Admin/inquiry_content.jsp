@@ -108,12 +108,12 @@ vertical-align:middle; overflow:visible; background:transparent; cursor:pointer;
 <tr><td>문의 내용</td><td>${inquiryDTO.i_content}</td></tr>
 <tr><td>문의 작성날짜</td><td>${inquiryDTO.i_date}</td></tr>
 
-<tr><td></td><td><hr width = "90%" color = "black" size = "5px;"></td></tr>
-
+<tr><td></td><td><hr width = "90%" color = "black" size = "5px"></td></tr>
+<c:if test="${sessionScope.id == 'admin'}">
 <tr><td>답변 제목</td><td>${inquiryDTO.asw_title}</td></tr>
 <tr><td>답변 내용</td><td>${inquiryDTO.asw_content}</td></tr>
 <tr><td>답변 작성날짜</td><td>${inquiryDTO.asw_date}</td></tr>
-
+</c:if>
 </table>
 <div id="table_search">
 		<c:if test="${sessionScope.id != 'admin'}">
@@ -131,7 +131,8 @@ vertical-align:middle; overflow:visible; background:transparent; cursor:pointer;
   			onclick="location.href='${pageContext.request.contextPath}/Admin/inquiry_delete?i_num=${inquiryDTO.i_num}'">
   		
 		</c:if>
-<input type="button" value="문의 목록" class="btn btn-primary" 
+<input type="button" value="문의 목록" class="btn btn-primary"
+ 
   onclick="location.href='${pageContext.request.contextPath}/Admin/inquiry'">
 </div>
 
